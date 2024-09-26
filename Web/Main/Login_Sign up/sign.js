@@ -51,7 +51,7 @@ document.getElementById('signup-form').addEventListener('submit', async (event) 
         });
 
         // Redirect to main.html
-        window.location.href = '/Web/Main/Home/main.html';
+        window.location.href = 'https://hachimannnn.github.io/Final-Project-JSI08/';
 
     } catch (error) {
         console.error('Error signing up:', error.message);
