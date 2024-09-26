@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="profile.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="leftnav">
+        <div class="logo" style="cursor: pointer;">
+            <img id="navHome" src="https://cdnb.artstation.com/p/assets/images/images/014/170/687/large/noah-harrington-screen-shot-2018-11-21-at-10-08-27.jpg?1542791375" alt="Cat Website Logo">
+        </div>
+        <button class="navbar-toggler" id="navbarToggler" aria-label="Toggle navigation"></button>
+            <i class="fa fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a id="navBreeds">Breeds</a></li>
+            <li class="dropdown">
+                <a id="CatFood">Cat Food<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-content">
+                    <li><a id="navDryFood">Dry Food</a></li>
+                    <li><a id="navWetFood">Wet Food</a></li>
+                    <li><a id="navOrganicFood">Organic Food</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a id="CatLitter">Cat Litter<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-content">
+                    <li><a id="navClayLitter">Clay Litter</a></li>
+                    <li><a id="navSilicaGelLitter">Silica Gel Litter</a></li>
+                    <li><a id="navNaturalLitter">Natural Litter</a></li>
+                </ul>
+            </li>
+            <li><a id="navContact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="rightnav">
+        <div class="nav-auth">
+            <li id="navProfile">
+                <img src="https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?auto=compress&fm=pjpg" alt="Profile Picture" id="profilePicture">
+                <a id="profileName1">Example</a>
+            </li>            
+            <li><a id="navLogout">Log Out</a></li>
+        </div>
+    </div>
+</nav>
+
+<!-- Profile Content -->
+<div class="profile-container">
+    <div class="profile-card">
+        
+        <img id="profileImage" src="https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?auto=compress&fm=pjpg" alt="Profile Picture">
+        <div class="profile-info">
+            <h2 id="profileName2">Example</h2>
+            <p id="profileBio">This is a sample bio.</p>
+            <button class="button-55" role="button">Edit Bio</button>
+            
+            <!-- Profile details grouped together in a row -->
+            <div class="profile-details">
+                <div id="Username" style="margin-left: 5%;">
+                    <p>Username:</p>
+                    <b id="profileUsername">user123</b>
+                </div>
+                <div id="Email" style="margin-left: 0%;">
+                    <p>Email:</p>
+                    <b id="profileEmail">example@gmail.com</b>
+                </div>
+                <div id="Role" style="margin-right: 10%;">
+                    <p>Role:</p>
+                    <b id="profileRole">User</b>
+                </div>
+            </div>
+            <button class="button-55" role="button" style="margin-left: -78%;">Edit Username</button> 
+        </div>
+
+
+        <div class="container" id="admin-moderator-container" style="display: none;">
+            <h2>Available Roles</h2>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addRoleModal">
+              Add Role
+            </button>
+          
+            <!-- Table to display roles -->
+            <table id="role-table" class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Role Name</th>
+                  <th>Permissions</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          
+            <!-- Modal for adding a new role -->
+            <div class="modal fade" id="addRoleModal" tabindex="-1" role="dialog" aria-labelledby="addRoleModalTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="addRoleModalTitle">Add Role</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Form for adding role -->
+                    <form id="addRoleForm">
+                      <div class="form-group">
+                        <label for="addRoleName">Role Name</label>
+                        <input type="text" class="form-control" id="addRoleName" placeholder="Enter Role Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="addRolePermissions">Permissions</label>
+                        <input type="text" class="form-control" id="addRolePermissions" placeholder="Enter Permissions (comma-separated)">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Add Role</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Modal for editing permissions -->
+            <div class="modal fade" id="editRoleModal" tabindex="-1" role="dialog" aria-labelledby="editRoleModalTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="editRoleModalTitle">Edit Role</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Form for editing role -->
+                    <form id="editRoleForm">
+                      <div class="form-group">
+                        <label for="editRoleName">Edit Role Name</label>
+                        <input type="text" class="form-control" id="editRoleName" placeholder="Enter Role Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="editRolePermissions">Edit Permissions</label>
+                        <input type="text" class="form-control" id="editRolePermissions" placeholder="Enter Permissions (comma-separated)">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <h2>User Management</h2>
+            <!-- Search bar for filtering users -->
+            <div class="form-group">
+              <input type="text" id="search-user-input" class="form-control" placeholder="Search users by name, username, email, or role">
+            </div>
+          
+            <!-- Table for managing users -->
+            <table id="user-table" class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Username</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="user-table-body">
+              </tbody>
+            </table>
+          
+            <!-- Modal for editing user details -->
+            <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModalTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="editUserModalTitle">Edit User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="editUserForm">
+                      <!-- Form for editing user  -->
+                      <div class="form-group">
+                        <label for="editUserName">Username</label>
+                        <input type="text" class="form-control" id="editUserName" placeholder="Enter Username">
+                      </div>
+                      <div class="form-group">
+                        <label for="editUserEmail">Email</label>
+                        <input type="text" class="form-control" id="editUserEmail" placeholder="Enter Email">
+                      </div>
+                      <div class="form-group">
+                        <label for="editUserRole">Role (comma-separated)</label>
+                        <input type="text" class="form-control" id="editUserRole" placeholder="Enter Role">
+                      </div>
+                      <input type="hidden" id="editUserId">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+      <div class="footer-logo">
+          <div class="social-media">
+              <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+          </div>
+      </div>
+      <div class="footer-links">
+          <a href="#">ABOUT US</a>
+          <a href="#">CONTACT US</a>
+          <a href="#">TERMS OF USE</a>
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">RESCUE PARTNER PROGRAM</a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>
+          The educational cat health content is based on Cats.com ( which is written by or reviewed by a variety of veterinary experts ). 
+          This educational content is not veterinary advice and does not replace consultation with a qualified veterinarian. 
+          Use of this site is subject to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>. ©2025
+      </p>
+  </div>
+</footer>
+</body>
+</html>
