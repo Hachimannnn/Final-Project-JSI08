@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore, collection, getDocs, setDoc, deleteDoc, doc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Your web app's Firebase configuration
@@ -76,6 +76,15 @@ async function setupNavigation() {
         }
     });
 }
+
+// Add event listener for logout button
+const navLogout = document.getElementById('navLogout');
+
+// Add event listener for logout button
+navLogout.addEventListener('click', () => {
+    signOut(auth)
+});
+
 
 // Initialize navigation
 document.addEventListener('DOMContentLoaded', async () => {
@@ -514,5 +523,3 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchUsers();
     addSearchFunctionality();
 });
-
-
