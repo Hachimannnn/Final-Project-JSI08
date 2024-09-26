@@ -1,0 +1,580 @@
+/* Navbar  */
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: #ffffff;
+padding: 1rem;
+display: flex;
+align-items: center;
+justify-content: space-between; /* Good spacing */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+z-index: 1;
+font-size: x-large;
+font-family: monospace;
+font-stretch: extra-condensed;
+font-weight: bold;
+}
+
+.leftnav, .rightnav {
+display: flex;
+align-items: center;
+}
+
+.leftnav {
+flex-grow: 1; 
+}
+
+.logo {
+margin-right: 20px;
+}
+
+.logo img {
+width: 50px;
+height: 50px;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav-links li {
+margin-right: 40px;
+}
+
+.nav-links a {
+color: #000000;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+color: #666;
+}
+
+.rightnav {
+display: flex;
+align-items: center;
+margin-right: 3%;
+}
+
+.nav-auth {
+display: flex;
+align-items: center;
+}
+
+.nav-auth li {
+margin-left: 20px;
+display: flex;
+align-items: center;
+}
+
+#profilePicture {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.nav-auth a {
+color: #000;
+text-decoration: none;
+font-size: x-large;
+font-family: monospace;
+font-stretch: extra-condensed;
+font-weight: bold;
+}
+
+.nav-auth a:hover {
+color: #fff; /* White for hover text */
+background-color: #666; /* Dark gray background */
+transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+transform: scale(1.05);
+}
+
+/* Dropdown */
+.dropdown {
+position: relative;
+cursor: pointer;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content li {
+margin-bottom: 10px;
+}
+
+.dropdown-content a {
+color: #333;
+text-decoration: none;
+display: block;
+padding: 10px;
+}
+
+.arrow {
+display: inline-block;
+margin-left: 10px;
+transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+transform: rotate(180deg); /* Rotate arrow to point up */
+}
+
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Side Content  */
+.hero-section {
+background: url('https://www.travelandleisure.com/thmb/EX2GMaNj47Cd0nCTiKMW205mCWQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/kitten-litter-cat-names-CATNAMES0521-338c6363384c46af850c71f57c66559d.jpg') 
+            no-repeat center center/cover;
+width: 100%; 
+height: 100vh; 
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.hero-section img {
+width: 100%;
+height: auto;
+}
+
+.hero-overlay {
+background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+position: absolute;
+top: 0;
+bottom: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
+
+.hero-content h1 {
+position: relative;
+font-size: 3rem;
+margin: 0;
+text-align: center;
+color: white;
+}
+
+.hero-content h1::after {
+content: '';
+position: absolute;
+left: 50%;
+bottom: -10px; /* Position the underline below the text */
+transform: translateX(-50%);
+width: 80px; /* Fixed width for the underline */
+height: 3px; /* Thickness of the underline */
+background-color: yellow; /* Color of the underline */
+}
+
+.hero-content .trademark {
+font-size: 1rem;
+vertical-align: super;
+}
+
+/* Main content */
+body {
+font-family: 'Gill Sans', Calibri, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+margin-top: 100px;
+}
+
+.container .title {
+font-size: 55px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.card-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.card {
+width: 400px;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+border-radius: 20px;
+margin: 20px;
+cursor: pointer;
+}
+
+.card .image {
+width: 100%;
+height: 250px;
+object-fit: cover;
+}
+
+
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+background-color: #f1f1f1;
+}
+
+.card a {
+margin-top: 0;
+font-size: 1rem;
+max-width: 350px;
+margin-left: 2%;
+}
+
+.card p {
+font-size: 1rem;
+max-width: 350px;
+margin-left: 2%;
+}
+
+.author {
+align-items: center;
+margin-top: 20px;
+margin-left: 3%;
+}
+
+.author img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.author-name {
+height: 50px;
+}
+
+.author span {
+font-weight: bold;
+}
+
+.title {
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.description {
+line-height: 1.6;
+}
+
+.api {
+margin-top: 20px;
+}
+
+.api p {
+text-align: center;
+font-size: large;
+}
+
+.cat-images {
+display: flex;
+justify-content: center;
+gap: 10%; 
+margin: 40px 0;
+}
+
+.cat-images img {
+width: 300px;  
+height: 300px;
+object-fit: cover; 
+border-radius: 10px; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.button-55 {
+background-color: #fff;
+background-image: none;
+background-position: 0 90%;
+background-repeat: repeat no-repeat;
+background-size: 4px 3px;
+border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+border-style: solid;
+border-width: 2px;
+box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+box-sizing: border-box;
+color: #41403e;
+cursor: pointer;
+display: inline-block;
+font-family: Neucha, sans-serif;
+font-size: 1rem;
+line-height: 23px;
+outline: none;
+padding: .75rem;
+text-decoration: none;
+transition: all 235ms ease-in-out;
+border-bottom-left-radius: 15px 255px;
+border-bottom-right-radius: 225px 15px;
+border-top-left-radius: 255px 15px;
+border-top-right-radius: 15px 225px;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+margin-top: 10px;
+}
+
+.button-55-container {
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+.button-55:hover {
+box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/* Footer  */
+footer {
+background-color: #f8f8f8;
+padding: 60px;
+text-align: center;
+margin-top: 2%;
+}
+
+.footer-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.footer-logo {
+margin-bottom: 20px;
+}
+
+.footer-logo h1 {
+margin: 0;
+font-size: 24px;
+}
+
+.social-media {
+display: flex;
+gap: 10px;
+margin-top: 10px;
+}
+
+.social-media a img {
+width: 24px;
+height: 24px;
+}
+
+.footer-links {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+max-width: 800px;
+}
+
+.footer-links a {
+text-decoration: none;
+color: #000;
+font-size: 14px;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}
+
+.footer-bottom {
+font-size: 12px;
+color: #666;
+max-width: 800px;
+margin: 0 auto 20px;
+}
+
+.footer-bottom a {
+color: #3ca0be;
+text-decoration: none;
+}
+
+.footer-bottom p {
+font-size:medium;
+}
+.footer-bottom a:hover {
+text-decoration: underline;
+}
+
+.social-media i {
+color: #000;
+}
+
+/* Show nav-links when toggled */
+.nav-links.active {
+    display: flex; /* or display: block; based on your layout */
+    flex-direction: column; /* Make it vertical */
+}
+
+/* Toggler button styles */
+.navbar-toggler {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust size as needed */
+}
+
+#toggle-icon {
+    display: none;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+.container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    object-fit: cover;
+}
+
+.content h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.content p {
+    margin: 0 auto;
+}
+
+.author img{
+    margin-left: 15%;
+}
+
+.author div{
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem; /* Adjust hero text size */
+}
+
+.button-55 {
+    margin-left: 0; /* Center button */
+}
+
+.cat-images img {
+    width: 250px; /* Adjust size of cat images */
+    height: 250px;
+}
+
+}
+
+/* For mobile screens (768px and below) */
+@media only screen and (max-width: 768px) {
+.nav-links {
+    display: none; /* Initially hide the links */
+}
+
+#toggle-icon {
+    display: block;
+}
+
+.card-grid {
+    margin-left: 15%;
+}
+
+.how-to .title {
+    margin-left: 15%;
+}
+
+.cat-food .title {
+    margin-left: 15%;
+}
+
+.cat-health .title {
+    margin-left: 15%;
+}
+
+.api .title {
+    margin-left: 15%;
+    width: 100%;
+}
+
+.navbar-toggler {
+    display: block; 
+}
+
+.nav-links {
+    flex-direction: column; /* Stack vertically */
+    position: absolute; /* Position it absolutely */
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: white; /* Optional: background color */
+    z-index: 100; /* Ensure it stays on top */
+}
+
+.nav-links.open {
+    display: flex;
+    background-color: #fff;
+}
+
+.hero-section {
+    width: 100%;
+    height: 100vh; 
+    padding: 0; 
+    margin-left: 5%;
+}
+
+.hero-overlay {
+    width: 100%;
+}
+
+.nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-content {
+    position: relative;
+}
+
+.button-55 {
+    margin-left: 25%; 
+}
+
+.footer {
+    width: 100%;
+}
+
+.cat-images {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+}
+}

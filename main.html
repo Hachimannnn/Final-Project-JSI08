@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatSense</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" src="main1.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="leftnav">
+        <div class="logo" style="cursor: pointer;">
+            <img id="navHome" src="https://cdnb.artstation.com/p/assets/images/images/014/170/687/large/noah-harrington-screen-shot-2018-11-21-at-10-08-27.jpg?1542791375" alt="Cat Website Logo">
+        </div>
+        <button class="navbar-toggler" id="navbarToggler" aria-label="Toggle navigation"></button>
+            <i class="fa fa-bars" id="toggle-icon"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a id="navBreeds">Breeds</a></li>
+            <li class="dropdown">
+                <a id="CatFood">Cat Food<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-content">
+                    <li><a id="navDryFood">Dry Food</a></li>
+                    <li><a id="navWetFood">Wet Food</a></li>
+                    <li><a id="navOrganicFood">Organic Food</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a id="CatLitter">Cat Litter<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-content">
+                    <li><a id="navClayLitter">Clay Litter</a></li>
+                    <li><a id="navSilicaGelLitter">Silica Gel Litter</a></li>
+                    <li><a id="navNaturalLitter">Natural Litter</a></li>
+                </ul>
+            </li>
+            <li><a id="navContact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="rightnav">
+        <div class="nav-auth">
+            <li id="navProfile">
+                <img src="https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?auto=compress&fm=pjpg" alt="Profile Picture" id="profilePicture">
+                <a id="Name">Example</a>
+            </li>
+            <li><a id="navLogin" style="margin-right: 20px;">Log In</a></li>
+            <li><a id="navSignUp">Sign Up</a></li>
+            <li><a id="navLogout">Log Out</a></li>
+        </div>
+    </div>
+</nav>
+
+<!-- Side Content  -->
+<header class="hero-section">
+  <div class="hero-overlay">
+
+    <div class="hero-content">
+        <h1>Let's Understand Cats<span class="trademark">™</span></h1>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="cat-health">
+    <h1 class="title">CAT HEALTH</h1>
+    <div class="card-grid">
+        <a class="card" id="catHealthArticle1">
+            <img src="https://www.omlet.co.uk/images/originals/Cat-Cat_Guide-A_lovely_young_cat_having_a_routine_check_up_at_the_vets.jpg" class="image" style="width: 400px; object-fit: cover;">
+            <div class="content">
+                <h2>Solensia for Cats: Overview, Dosage & Side Effects</h2>
+                <p>Solensia is an injectable medication that's FDA-approved for use in cats to...</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2020/11/Chris-Vanderhoof-1-100x100.jpg" class="author-img" style="margin-top: 20px;">
+                <div class="author-name" style="margin-top: -35px; margin-left: 60px; " >by Dr. Chris Vanderhoof</div>
+            </div>
+        </a>
+        
+        <a class="card" id="catHealthArticle2">
+            <img src="https://www.avma.org/sites/default/files/2023-03/2023-03-14-avma-news-Cat-Spores-01.jpg" class="image" style="width: 400px; object-fit: cover;">
+            <div class="content">
+                <h2>Pancreatitis in Cats: Causes, Symptoms, & Treatment</h2>
+                <p>If there was a "difficult feline diseases" award, feline pancreatitis would certainly...</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2020/01/pendergrass_01-180x180.jpg" class="author-img" style="margin-top: 20px;">
+                <div class="author-name" style="margin-top: -35px; margin-left: 60px;">by Joana Pendergrass</div>
+            </div>
+        </a>
+        
+        <a class="card" id="catHealthArticle3">
+            <img src="https://images.ctfassets.net/82d3r48zq721/7EQPY89dT8fSIW68X4CK62/dafeda3d259c4c4c4a3e533ac771fe1d/Giving-a-cat-a-pill_resized.jpg?w=800&q=50" class="image" style="object-fit: cover;">
+            <div class="content">
+                <h2>Skin Tumours (Histiocytoma) in Cats: Causes, Symptoms, & Treatment</h2>
+                <p>When you find a new lump or lesion on your cat, it can be...</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2021/12/Aisling-OKeeffe.jpg" class="author-img" style="margin-top: -5px;">
+                <div class="author-name" style="margin-top: -35px; margin-left: 60px;">by Dr. Aisling</div>
+            </div>
+        </a>
+    </div>
+  </div>
+
+  <div class="cat-food">
+    <h1 class="title">CAT FOOD</h1>
+    <div class="card-grid">
+        <a class="card" id="catFoodArticle1">
+            <img src="https://www.telegraph.co.uk/content/dam/pets/2023/03/22/TELEMMGLPICT000329819598_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpeg" class="image" style="width: 400px; object-fit: cover;">
+            <div class="content">
+                <h2>Best Cat Food: Top Brands, Low Prices</h2>
+                <p>Whether wet, dry, raw, or freshly cooked, the best cat food honors your cat’s needs as an obligate carnivore...</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2022/08/cropped-Small-pfp-90x90.jpg" class="author-img">
+                <div class="author-name" style="margin-top: -35px; margin-left: 60px;">by Mallory Crusta</div>
+            </div>
+        </a>
+        
+        <a class="card" id="catFoodArticle2">
+            <img src="https://healthyspot.com/cdn/shop/files/Feline-Natural-Collection---Mobile_768x350_crop_center.jpg?v=1699404003" class="image" style="width: 400px; object-fit: cover;">
+            <div class="content">
+                <h2>Feline Natural Cat Food Review</h2>
+                <p>We’ve analyzed Feline Natural and graded it according to the Cats.com standard... Here’s how it rates in each of these six key areas.</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2022/08/cropped-Small-pfp-90x90.jpg" class="author-img" style="margin-top: 25px;">
+                <div class="author-name" style="margin-top: -35px; margin-left: 60px;">by Mallory Crusta</div>
+            </div>
+        </a>
+        
+        <a class="card" id="catFoodArticle3">
+            <img src="https://pangovet.com/wp-content/uploads/2024/06/Open-Farm-Cat-Food-Featured-Image-1024x512.webp" class="image" style="object-fit: cover;">
+            <div class="content">
+                <h2>Open Farm Cat Food Review</h2>
+                <p>We’ve rated Open Farm on ingredient quality, recalls, and more. Read our Open Farm cat food review to learn how this brand stacks up.</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2023/03/kate-90x90.jpg" class="author-img" style="margin-top: 25px;">
+                <div class="author-name" style="margin-top: -35px; margin-left: 60px;">by Kate Barrington</div>
+            </div>
+        </a>
+    </div>  
+  </div>
+
+  <div class="how-to">
+    <h1 class="title">HOW TO</h1>
+    <div class="card-grid">
+        <a class="card" id="howToArticle1">
+            <img src="https://www.dutch.com/cdn/shop/articles/shutterstock_1767333641.jpg?v=1642535641" class="image" style="width: 400px; object-fit: cover;">
+            <div class="content">
+                <h2>How To Litter Train A Kitten In 3 Simple Steps</h2>
+                <p>Have you ever imagined adding potty training a kitten to your list of achievements?</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2020/05/Mel-and-Serafina-100x100.jpg" class="author-img">
+                <div class="author-name" style="margin-top: -35px">by Melina Grin</div>
+            </div>
+        </a>
+        
+        <a class="card" id="howToArticle2">
+            <img src="https://media.istockphoto.com/id/525982128/photo/the-cat-aggression.jpg?s=612x612&w=0&k=20&c=nvehkiqTZ4JJIqHLYJ2x5RxrySX_gYc-WKB9K8kbcY0=" class="image" style="width: 400px; object-fit: cover;">
+            <div class="content">
+                <h2>How To Tell if a Cat Is Angry</h2>
+                <p>Cats may not be able to speak but they sure can make their feelings known in other ways.</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2023/02/Gemma-Cliffin-vet-90x90.jpeg" class="author-img" style="margin-top: 25px;">
+                <div class="author-name" style="margin-top: -35px">by Dr. Gemma Cliffin</div>
+            </div>
+        </a>
+        
+        <a class="card" id="howToArticle3">
+            <img src="https://i.ytimg.com/vi/tL2yglwkAEQ/maxresdefault.jpg" class="image" style="object-fit: cover;">
+            <div class="content">
+                <h2>How To Get Along With Your Cat</h2>
+                <p>As cat owners, we all want our cats to like us, but they can be complicated creatures.</p>
+            </div>
+            <div class="author">
+                <img src="https://cats.com/wp-content/uploads/2023/02/Gemma-Cliffin-vet-90x90.jpeg" class="author-img" style="margin-top: 25px;">
+                <div class="author-name" style="margin-top: -35px;">by Dr. Gemma Cliffin</div>
+            </div>
+        </a>
+    </div>  
+  </div>
+
+    <div class="api">
+        <h1 class="title">Random Cat Images</h1>
+        <div class="cat-images">
+            <div>
+                <img id="catImage1" alt="Cat Image 1" />
+                <p id="catBreed1"></p>
+            </div>
+            <div>
+                <img id="catImage2" alt="Cat Image 2" />
+                <p id="catBreed2"></p>
+            </div>
+            <div>
+                <img id="catImage3" alt="Cat Image 3" />
+                <p id="catBreed3"></p>
+            </div>
+        </div>
+        <div class="button-55-container">
+            <a class="button-55" onclick="fetchCatImages()">Get More Cats</a>
+        </div>
+   </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+      <div class="footer-logo">
+          <div class="social-media">
+              <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+          </div>
+      </div>
+      <div class="footer-links">
+          <a href="#">ABOUT US</a>
+          <a href="#">CONTACT US</a>
+          <a href="#">TERMS OF USE</a>
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">RESCUE PARTNER PROGRAM</a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>
+          The educational cat health content is based on Cats.com ( which is written by or reviewed by a variety of veterinary experts ). 
+          This educational content is not veterinary advice and does not replace consultation with a qualified veterinarian. 
+          Use of this site is subject to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>. ©2025
+      </p>
+  </div>
+  <!-- <div class="back-to-top">
+      <a href="#top">BACK TO TOP</a>
+  </div> -->
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
