@@ -33,7 +33,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         const user = userCredential.user;
 
         // Redirect to main.html
-        window.location.href = '/Web/Main/Home/main.html';
+        window.location.href = 'https://hachimannnn.github.io/Final-Project-JSI08/';
 
     } catch (error) {
         console.error('Error logging in:', error.message);
