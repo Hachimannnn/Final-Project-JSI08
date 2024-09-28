@@ -443,11 +443,6 @@ footer {
     color: #000;    
 }
 
-
-.nav-links {
-    display: none; /* Initially hide the links */
-}
-
 /* Show nav-links when toggled */
 .nav-links.active {
     display: flex; /* or display: block; based on your layout */
@@ -463,12 +458,83 @@ footer {
     font-size: 24px; /* Adjust size as needed */
 }
 
+#toggle-icon {
+    display: none;
+}
+
+/* Media queries for responsiveness */
 @media only screen and (max-width: 1200px) {
-        
-    }
-    
+.container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    object-fit: cover;
+}
+
+.content h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.content p {
+    margin: 0 auto;
+}
+
+.author img{
+    margin-left: 15%;
+}
+
+.author div{
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem; /* Adjust hero text size */
+}
+
+.button-55 {
+    margin-left: 0; /* Center button */
+}
+
+.cat-images img {
+    width: 250px; /* Adjust size of cat images */
+    height: 250px;
+}
+
+}
+
 /* For mobile screens (768px and below) */
 @media only screen and (max-width: 768px) {
+.nav-links {
+    display: none; /* Initially hide the links */
+}
+
+#toggle-icon {
+    display: block;
+}
+
+.card-grid {
+    margin-left: 15%;
+}
+
+.how-to .title {
+    margin-left: 15%;
+}
+
+.cat-food .title {
+    margin-left: 15%;
+}
+
+.cat-health .title {
+    margin-left: 15%;
+}
+
+.api .title {
+    margin-left: 15%;
+    width: 100%;
+}
 
 .navbar-toggler {
     display: block; 
@@ -489,6 +555,17 @@ footer {
     background-color: #fff;
 }
 
+.hero-section {
+    width: 100%;
+    height: 100vh; 
+    padding: 0; 
+    margin-left: 5%;
+}
+
+.hero-overlay {
+    width: 100%;
+}
+
 .nav-links li {
     margin-right: 0;
     margin-bottom: 10px;
@@ -500,8 +577,17 @@ footer {
     position: relative;
 }
 
+.button-55 {
+    margin-left: 25%; 
+}
+
 .footer {
     width: 100%;
 }
 
+.cat-images {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+}
 }
